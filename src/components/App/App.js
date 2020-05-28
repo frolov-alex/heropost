@@ -31,11 +31,11 @@ function App({ history: { location: { pathname } }, setActivePageAction }) {
 
   return (
     <main className="app">
+
       <AppHeader/>
 
-      <main className="app__body">
-        <div className="reg-form">
-
+      <div className="app__container">
+        <main className="app__body">
           <Switch>
             <Route path={ROUTE_HOME} exact component={SignUp}/>
             <Route path={ROUTE_SETUP_ACCOUNT} exact component={SetupAccount}/>
@@ -43,13 +43,16 @@ function App({ history: { location: { pathname } }, setActivePageAction }) {
             <Route path={ROUTE_REVIEW} exact component={Review}/>
             <Redirect to={ROUTE_HOME}/>
           </Switch>
+        </main>
 
-        </div>
-      </main>
+        <aside className="app__aside">
+          <Menu/>
+        </aside>
+      </div>
 
-      <aside className="app__aside">
-        <Menu/>
-      </aside>
+      <div className="app__footer">
+        <p>&nbsp;</p>
+      </div>
     </main>
   );
 }

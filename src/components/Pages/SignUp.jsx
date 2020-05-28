@@ -4,7 +4,6 @@ import TextField from '../Forms/TextField';
 import SelectField from '../Forms/SelectField';
 import CheckboxField from '../Forms/CheckboxField';
 import Form from '../Forms/Form';
-import Button from '../Forms/Button';
 import { useFormik } from 'formik';
 import { ROUTE_SETUP_ACCOUNT } from '../../const/Routes';
 import { setActivePageAction, setSignInAction } from '../../store/actions';
@@ -25,8 +24,21 @@ const SignUp = ({ app, setSignInAction, setActivePageAction, history }) => {
 
   const { handleSubmit, values, ...options } = formik;
 
+  const formActions = [
+    {
+      id: 'btn-01',
+      disabled: true,
+      label: 'Cancel'
+    },
+    {
+      id: 'btn-02',
+      primary: true,
+      label: 'Next step'
+    }
+  ]
+
   return (
-    <Form type="sign-up" title="Sign Up" icon="📝" handleSubmit={handleSubmit}>
+    <Form type="sign-up" title="Sign Up" icon="📝" handleSubmit={handleSubmit} actions={formActions}>
       <FormRow inline={true}>
         <TextField
           name="user" placeholder="Fullname" icon="user"
@@ -68,11 +80,6 @@ const SignUp = ({ app, setSignInAction, setActivePageAction, history }) => {
         </CheckboxField>
 
         <p className="form__note">*after signing up you will be asked to validate your email address.</p>
-      </FormRow>
-
-      <FormRow type="actions">
-        <Button disabled={true}>Cancel</Button>
-        <Button type="primary">Next step</Button>
       </FormRow>
     </Form>
   );

@@ -2,45 +2,39 @@
 
 .app {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   height: 100%;
 
   &__header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    padding: 48px 55px 40px;
+  }
+
+  &__container {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: flex-start;
+    padding: 0 15px;
+    max-width: 1540px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   &__body {
-    flex: 0 0 53.1%;
-    padding: 130px 0 0;
+    flex: 0 0 74%;
+    box-shadow: 0 30px 99px rgba(#000, .29);
+    border-radius: 24px;
+    background: #fff;
+    min-height: 840px;
+    height: 100%;
+    padding: 40px 30px 38px;
   }
 
   &__aside {
-    flex: 0 0 46.9%;
-    background: #000;
-    color: $primaryLighter;
-    box-sizing: border-box;
-    padding: 10.7% 208px 0 19.6%;
+    flex: 0 0 26%;
+    padding: 60px 0 0 24px;
   }
-}
 
-.reg-form {
-  position: absolute;
-  background: #fff;
-  padding: 48px 32px 32px;
-  width: 57.85%;
-  min-height: 844px;
-  left: 50%;
-  transform: translateX(-63%);
-  box-shadow: 0 30px 99px rgba(#000, .29);
-  border-radius: 24px;
-  box-sizing: border-box;
-}
-
-pre {
-  background: $borderColor;
-  max-height: 400px;
-  overflow: scroll;
+  &__footer  {
+    padding: 32px 55px;
+  }
 }

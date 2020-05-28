@@ -1,6 +1,12 @@
 @import "src/styles/vars";
 
 .slider-field {
+  position: relative;
+
+  .tooltip {
+    display: none;
+  }
+
   &__note {
     text-align: center;
     color: $noteColor;
@@ -14,13 +20,60 @@
   }
 
   &_compact {
+    margin-left: 10px;
+    margin-right: 15px;
+
     .rangeslider {
       height: 6px;
       background: #EEF2F4;
+      margin-bottom: 0;
 
       &__handle {
         width: 16px;
         height: 16px;
+      }
+
+      &__labels {
+        position: absolute;
+        pointer-events: none;
+        top: -3px;
+        left: -10px;
+        right: -15px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        line-height: 13px;
+        color: $noteColor;
+      }
+    }
+
+    .tooltip {
+      display: block;
+      position: absolute;
+      width: 32px;
+      background: $primary;
+      margin-left: -6px;
+      text-align: center;
+      border-radius: 4px;
+      font-size: 10px;
+      line-height: 20px;
+      color: #fff;
+      top: -35px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        display: inline-block;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid $primary;
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+      }
+
+      &_start {
+        margin-left: -8px;
       }
     }
   }
@@ -29,7 +82,7 @@
 .rangeslider {
   height: 12px;
   border-radius: 3px;
-
+  cursor: pointer;
   margin: 20px 0;
   position: relative;
   background: #e6e6e6;
@@ -48,8 +101,7 @@
     height: 28px;
     background: $primary;
     outline: none;
-
-    cursor: pointer;
+    cursor: ew-resize;
     display: inline-block;
     position: absolute;
 

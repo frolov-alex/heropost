@@ -1,7 +1,6 @@
 import React from 'react';
 import Form from '../Forms/Form';
 import FormRow from '../Forms/FormRow';
-import Button from '../Forms/Button';
 import { ROUTE_REVIEW, ROUTE_SETUP_ACCOUNT } from '../../const/Routes';
 import { useFormik } from 'formik';
 import { setActivePageAction, setPlatformsAction } from '../../store/actions';
@@ -29,13 +28,43 @@ const socialsData = [
     count: 0
   },
   {
+    id: 'youtube',
+    label: 'Youtube',
+    count: 0
+  },
+  {
     id: 'vk',
     label: 'Vkontakte',
     count: 0
   },
   {
-    id: 'youtube',
-    label: 'Youtube',
+    id: 'twitter',
+    label: 'Twitter',
+    count: 0
+  },
+  {
+    id: 'pinterest',
+    label: 'Pinterest',
+    count: 0
+  },
+  {
+    id: 'thumblr',
+    label: 'Thumblr',
+    count: 0
+  },
+  {
+    id: 'linkedin',
+    label: 'Linkedin',
+    count: 0
+  },
+  {
+    id: 'google',
+    label: 'Google',
+    count: 0
+  },
+  {
+    id: 'reddit',
+    label: 'Reddit',
     count: 0
   }
 ];
@@ -61,17 +90,25 @@ const SocialPlatforms = ({ setPlatformsAction, setActivePageAction, history }) =
     );
   });
 
+  const formActions = [
+    {
+      id: 'btn-01',
+      href: ROUTE_SETUP_ACCOUNT,
+      label: 'Cancel'
+    },
+    {
+      id: 'btn-02',
+      primary: true,
+      label: 'Next step'
+    }
+  ]
+
   return (
-    <Form type="social-platforms" title="Allocate Social Platforms" icon="🚀🗃" handleSubmit={handleSubmit}>
+    <Form type="social-platforms" title="Allocate Social Platforms" icon="🚀🗃" handleSubmit={handleSubmit} actions={formActions}>
       <FormRow>
         <ul className="social-platforms">
           {items}
         </ul>
-      </FormRow>
-
-      <FormRow type="actions">
-        <Button href={ROUTE_SETUP_ACCOUNT}>Cancel</Button>
-        <Button type="primary">Next step</Button>
       </FormRow>
     </Form>
   );

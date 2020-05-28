@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap");
 @import "./vars";
 @import "./reset";
 
@@ -9,9 +10,12 @@
     height: 100%;
     font: 15px/1.25 Rubik, sans-serif;
     color: $textColor;
+    background: linear-gradient(90deg, #fff 0%, #fff 53%, #000 53%, #000 100%);
+    min-width: 1120px;
   }
 
   &__app {
     height: 100%;
+    min-height: 100%;
   }
 }

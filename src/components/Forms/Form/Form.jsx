@@ -1,7 +1,8 @@
 import React from 'react';
 import './Form.scss';
+import Button from '../Button';
 
-const Form = ({ type, icon, title, children, handleSubmit }) => {
+const Form = ({ type, icon, title, children, handleSubmit, actions }) => {
 
   const FormHeader = () => {
     if (!title) {
@@ -9,25 +10,49 @@ const Form = ({ type, icon, title, children, handleSubmit }) => {
     }
 
     return (
-      <header className="form__header">
+      <div className="form__header">
         <h2 className="form__title">
           <span className="form__title-icon" role="img" aria-label={title}>{icon}</span>
           {title}
         </h2>
-      </header>
+      </div>
+    );
+  };
+
+  const FormFooter = () => {
+
+    if (!actions) {
+      return null;
+    }
+
+    return (
+      <div className="form__footer">
+        {actions.map(({ id, disabled, label, primary, href, emoji }) => {
+          return (
+            <Button
+              key={id} type={primary ? 'primary' : false}
+              disabled={disabled} href={href}
+              withoutIcon={emoji ? true : false}
+            >
+              {label}
+              {emoji && <span role="img" aria-label="ok">👌</span>}
+            </Button>
+          );
+        })}
+      </div>
     );
   };
 
   return (
-    <section className={`form form_type_${type}`}>
-
+    <form className={`form form_type_${type}`} onSubmit={handleSubmit}>
       <FormHeader/>
 
-      <form className="form__body" onSubmit={handleSubmit}>
+      <div className="form__body">
         {children}
-      </form>
+      </div>
 
-    </section>
+      <FormFooter/>
+    </form>
   );
 };
 
