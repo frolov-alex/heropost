@@ -23,12 +23,18 @@
     font-weight: 500;
     font-size: 35px;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
   }
 
   &__title-icon {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
     margin: auto;
     font-size: 100px;
+    width: 137px;
+    height: 125px;
+    overflow: hidden;
   }
 
   &__row {

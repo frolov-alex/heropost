@@ -37,7 +37,7 @@ const SetupAccount = ({ app, setSetupAction, setActivePageAction, history }) => 
   const { handleSubmit, values, ...options } = formik;
 
   return (
-    <Form type="setup-account" title="Setup Account" icon="🛠" handleSubmit={handleSubmit}>
+    <Form type="setup-account" title="Setup Account" icon="🛠️" handleSubmit={handleSubmit}>
       <FormRow>
         <SwitchField name="plan" items={plans} {...options}/>
       </FormRow>

@@ -21,7 +21,7 @@ const menuData = [
     id: 'menu-02',
     link: ROUTE_SETUP_ACCOUNT,
     title: 'Setup Account Type',
-    icon: '🛠',
+    icon: '🛠️',
     description: 'Are you a solo individual or an agency with team members? Heropost will allow you to allocate sub-users into your' +
       ' account.'
   },
@@ -29,7 +29,7 @@ const menuData = [
     id: 'menu-03',
     link: ROUTE_SOCIAL_PLATFORMS,
     title: 'Allocate Social Platforms',
-    icon: '🗃',
+    icon: '🚀🗃',
     description: 'Select specific social platforms you would like to work with and the amount of accounts needed for each.'
   },
   {

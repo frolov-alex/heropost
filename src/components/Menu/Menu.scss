@@ -54,6 +54,12 @@
 
     span {
       margin-right: 4px;
+      display: inline-flex;
+      flex-direction: column-reverse;
+      width: 28px;
+      height: 24px;
+      overflow: hidden;
+      vertical-align: top;
     }
   }
 

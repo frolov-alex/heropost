@@ -62,7 +62,7 @@ const SocialPlatforms = ({ setPlatformsAction, setActivePageAction, history }) =
   });
 
   return (
-    <Form type="social-platforms" title="Allocate Social Platforms" icon="🗃" handleSubmit={handleSubmit}>
+    <Form type="social-platforms" title="Allocate Social Platforms" icon="🚀🗃" handleSubmit={handleSubmit}>
       <FormRow>
         <ul className="social-platforms">
           {items}
