@@ -1,0 +1,55 @@
+@import "src/styles/vars";
+
+.switch-field {
+  display: flex;
+  border-radius: 3px;
+  border: 1px solid $borderColor;
+
+  &__item {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+
+    &:not(:last-child) {
+      border-right: 1px solid $borderColor;
+    }
+
+    &:first-child {
+      label {
+        border-radius: 2px 0 0 2px;
+      }
+    }
+
+    &:last-child {
+      label {
+        border-radius: 0 2px 2px 0;
+      }
+    }
+  }
+
+  input {
+    display: none;
+    visibility: hidden;
+
+    &:checked {
+      + label {
+        background: $primary;
+        color: #fff;
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  label {
+    display: block;
+    padding: 31px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color .2s, color .2s, transform .2s;
+
+    &:hover {
+      background: darken(#fff, 4);
+    }
+  }
+
+
+}

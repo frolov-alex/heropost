@@ -1,0 +1,13 @@
+.social-platforms {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 32%;
+    margin-bottom: 26px;
+
+    &:nth-child(3n+2) {
+      margin: 0 2%;
+    }
+  }
+}

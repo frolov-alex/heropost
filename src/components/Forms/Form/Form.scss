@@ -1,0 +1,65 @@
+@import "../../../styles/vars";
+
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+
+  &__header {
+    text-align: center;
+    color: $formHeaderColor;
+
+    + .form__body {
+      margin-top: 40px;
+    }
+  }
+
+  &__body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 35px;
+    text-transform: uppercase;
+  }
+
+  &__title-icon {
+    display: block;
+    margin: auto;
+    font-size: 100px;
+  }
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__note {
+    max-width: 240px;
+    margin: 14px auto 0;
+    color: $primaryLight;
+  }
+
+  &_type {
+    &_sign-up {
+      .form__body {
+        max-width: 560px;
+      }
+    }
+
+    &_setup-account {
+      .form__body {
+        max-width: 360px;
+      }
+    }
+
+    &_social-platforms {
+      .form__body {
+        padding: 0 40px;
+      }
+    }
+  }
+}

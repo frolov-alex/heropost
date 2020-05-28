@@ -1,0 +1,47 @@
+@import "../../../styles/vars";
+
+.form-field {
+  box-sizing: border-box;
+  border: 1px solid $borderColor;
+  border-radius: 3px;
+  background: #fff;
+
+  &__select {
+    width: 100%;
+    padding: 0 10px;
+    border: 0;
+    outline: none;
+    line-height: 34px;
+    height: 34px;
+    background: none;
+
+    &:focus,
+    &:active {
+      border: 0;
+    }
+  }
+
+  &_iconed {
+    display: flex;
+  }
+
+  &_focused {
+    border-color: $primaryLight;
+    box-shadow: 0 0 8px rgba(#000, .15);
+  }
+
+  &__icon-box {
+    flex: 0 0 56px;
+    border-right: 1px solid $borderColor;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+  }
+}

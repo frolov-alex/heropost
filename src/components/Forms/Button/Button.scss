@@ -1,0 +1,41 @@
+@import "src/styles/vars";
+
+.button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  color: $textColor;
+  text-decoration: none;
+
+  &_type {
+    &_primary {
+      background: $primary;
+      color: #fff;
+      padding: 12px 48px;
+      border: 1px solid $btnBorderColor;
+      border-radius: 4px;
+      transition: background-color .2s;
+
+
+      &::after {
+        content: '';
+        background: url('./arrow.svg') 50% no-repeat;
+        width: 24px;
+        height: 24px;
+        transform: translateX(-3px);
+      }
+
+      &:hover {
+        background: darken($primary, 4);
+      }
+    }
+  }
+
+  &:disabled {
+    opacity: .7;
+    pointer-events: none;
+  }
+}

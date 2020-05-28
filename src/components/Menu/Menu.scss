@@ -1,0 +1,64 @@
+@import "src/styles/vars";
+
+.menu {
+  counter-reset: list;
+
+  &__item {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      counter-increment: list;
+      content: counter(list);
+      width: 52px;
+      line-height: 52px;
+      display: block;
+      border-radius: 50%;
+      text-align: center;
+      position: absolute;
+      right: 100%;
+      top: 10px;
+      background: #fff;
+      box-shadow: 0 3px 6px rgba(#000, .29);
+      color: $textColor;
+      transition: all .2s;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 62px;
+    }
+
+    &_active {
+      .menu__title,
+      .menu__description {
+        opacity: 1;
+      }
+
+      &::before {
+        background: $primary;
+        color: #fff;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__title {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 14px;
+    opacity: .5;
+
+    span {
+      margin-right: 4px;
+    }
+  }
+
+  &__description {
+    color: $primaryLighter;
+    opacity: .5;
+  }
+}

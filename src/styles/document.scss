@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+@import "./vars";
+@import "./reset";
+
+.document {
+  height: 100%;
+
+  &__body {
+    height: 100%;
+    font: 15px/1.25 Rubik, sans-serif;
+    color: $textColor;
+  }
+
+  &__app {
+    height: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+.form-row {
+  &_inline {
+    display: flex;
+
+
+    .form__field {
+      flex: 0 0 48%;
+
+      &:nth-child(even) {
+        margin-left: 4%;
+      }
+    }
+  }
+
+  &_type {
+    &_note {
+      margin-top: 42px;
+      text-align: center;
+    }
+
+    &_slider {
+      margin-top: 70px;
+    }
+
+    &_actions {
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+      right: 32px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

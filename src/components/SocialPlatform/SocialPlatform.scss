@@ -1,0 +1,31 @@
+@import "src/styles/vars";
+
+.social-platform {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-right: 8px;
+  }
+
+  &__slider {
+    flex: 1 0 auto;
+    padding-top: 15px;
+  }
+
+  &__counter {
+    flex: 1 0 100%;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 5px;
+    height: 26px;
+
+    span {
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
+}

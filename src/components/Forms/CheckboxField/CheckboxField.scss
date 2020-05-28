@@ -1,0 +1,78 @@
+@import "../../../styles/vars";
+
+$switchHeight: 40px;
+
+.form-field {
+  box-sizing: border-box;
+  border: 1px solid $borderColor;
+  border-radius: 3px;
+  background: #fff;
+
+  &_type {
+    &_checkbox {
+      border: 0;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+
+      .form-field__checkbox {
+        width: 46px;
+        height: 20px;
+        margin: 0;
+        border: 0;
+        visibility: hidden;
+
+        &:checked {
+          + .form-field__label {
+            &::before {
+              background: $primary;
+              content: attr(data-on);
+              text-align: left;
+            }
+
+            &::after {
+              transform: translate(26px, -50%);
+            }
+          }
+        }
+      }
+
+      .form-field__label {
+        display: inline-block;
+        color: $textColor;
+        margin-left: 8px;
+
+        &::before {
+          width: 46px;
+          height: 20px;
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background: $borderColor;
+          transition: background-color .25s;
+          border-radius: 20px;
+          box-sizing: border-box;
+          padding-left: 7px;
+          color: #fff;
+          font-size: 10px;
+          line-height: 22px;
+        }
+
+        &::after {
+          width: 14px;
+          height: 14px;
+          background: #fff;
+          position: absolute;
+          left: 3px;
+          top: 50%;
+          content: '';
+          transform: translateY(-50%);
+          border-radius: $switchHeight;
+          transition: transform .4s;
+        }
+      }
+    }
+  }
+}

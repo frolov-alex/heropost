@@ -1,0 +1,15 @@
+<svg id="Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Shape" d="M8.991,18A9,9,0,1,1,18,9,9.006,9.006,0,0,1,8.991,18ZM9,1.8A7.2,7.2,0,1,0,16.2,9,7.208,7.208,0,0,0,9,1.8Zm2.371,10.947a1,1,0,0,1-.678-.265L8.322,10.3A1,1,0,0,1,8,9.562V5a1,1,0,1,1,2,0V8.658a1,1,0,0,0,.318.732l1.739,1.621a1,1,0,0,1,.049,1.414l0,0A.988.988,0,0,1,11.371,12.747Z" transform="translate(2 2)" fill="rgba(0,0,0,0.7)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_109" data-name="Group 109">
+    <path id="Shape-2" data-name="Shape" d="M8.991,18A9,9,0,1,1,18,9,9.006,9.006,0,0,1,8.991,18ZM9,1.8A7.2,7.2,0,1,0,16.2,9,7.208,7.208,0,0,0,9,1.8Zm2.371,10.947a1,1,0,0,1-.678-.265L8.322,10.3A1,1,0,0,1,8,9.562V5a1,1,0,1,1,2,0V8.658a1,1,0,0,0,.318.732l1.739,1.621a1,1,0,0,1,.049,1.414l0,0A.988.988,0,0,1,11.371,12.747Z" transform="translate(2 2)" fill="rgba(0,0,0,0.7)"/>
+    <g id="Mask_Group_109" data-name="Mask Group 109" clip-path="url(#clip-path)">
+      <g id="Color">
+        <rect id="Rectangle" width="22" height="22" fill="#4a5b6d"/>
+      </g>
+    </g>
+  </g>
+</svg>
